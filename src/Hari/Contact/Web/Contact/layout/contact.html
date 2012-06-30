@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Hello title of contact</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/asset/Hari.Blog/css/bootstrap-responsive.min.css" />
+    <link rel="stylesheet" href="/asset/Hari.Blog/css/bootstrap.css" />
+    <script type="text/javascript" href="http://code.jquery.com/jquery-1.7.1.min.js" ></script>
+    <script type="text/javascript" href="/asset/Hari.Blog/js/bootstrap.min.js" ></script>
+    <script type="text/javascript" href="/asset/Hari.Blog/js/bootstrap-transition.js" ></script>
+    <script type="text/javascript" href="http://code.jquery.com/jquery-1.7.1.min.js" ></script>
+    <script type="text/javascript" href="/asset/Hari.Blog/js/bootstrap-alert.js"></script>
+    <script type="text/javascript" href="/asset/Hari.Blog/js/bootstrap-modal.js"></script>
+    <script type="text/javascript" href="/asset/Hari.Blog/js/bootstrap-dropdown.js"></script>
+    <script type="text/javascript" href="/asset/Hari.Blog/js/bootstrap-scrollspy.js"></script>
+    <script type="text/javascript" href="/asset/Hari.Blog/js/bootstrap-tab.js"></script>
+    <script type="text/javascript" href="/asset/Hari.Blog/js/bootstrap-tooltip.js"></script>
+    <script type="text/javascript" href="/asset/Hari.Blog/js/bootstrap-popover.js"></script>
+    <script type="text/javascript" href="/asset/Hari.Blog/js/bootstrap-button.js"></script>
+    <script type="text/javascript" href="/asset/Hari.Blog/js/bootstrap-collapse.js"></script>
+    <script type="text/javascript" href="/asset/Hari.Blog/js/bootstrap-carousel.js"></script>
+    <script type="text/javascript" href="/asset/Hari.Blog/js/bootstrap-typeahead.js"></script>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+    </style>
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+    {% include 'Hari.Blog:Post:top-nav.html' %}
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+            {% include 'Hari.Blog:Post:side-nav.html' %}
+        </div><!--/span-->
+        <div class="span9">
+            {% block content %}{% endblock %}
+        </div><!--/span-->
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        {% include 'Hari.Blog:Post:footer.html' %}
+      </footer>
+
+    </div><!--/.fluid-container-->
+  </body>
+</html>
