@@ -18,8 +18,7 @@ class ContactForm extends Zend_Form
             ->setRequired(true);
 
         $message = new \Zend_Form_Element_Textarea('message');
-        $message->addValidator(new \Zend_Validate_Alnum())
-            ->setLabel('Message')
+        $message->setLabel('Message')
             ->setRequired(true)
             ->setAttribs(['rows' => 5, 'cols' => 10]);
         

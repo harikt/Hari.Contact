@@ -1,25 +1,37 @@
-This is a play gorund for Aura Project for PHP. An experimental Vendor.Package.
+This is a sample project, just to demonstrate a Vendor.Package in Aura. Have a look into the `config/default.php`. Just drop this package in package folder of system folder.
 
-Hari.Contact tries to incorporate different rendering engines like PHP, Twig, Mustache, Dwoo, Smarty, Latte etc to Aura Framework.
+# Requirements 
+a ) PHP 5.4
+b ) Aura system
+c ) Zend Framework 1 for we are creating forms. Eventually will be removed.
+Keep ZF1 in include folder of aura framework folder.
 
-Dependencies :
-This package has dependencies.
+# Running Server:
 
-Hari.Blog ( which contains the layouts, one layout from different packages :-) )
+Now you can run your development server via 
+ 
+    $php package/Aura.Framework/cli/server
 
-Zend Framework1 Form component . Any packages which are PSR-0 are compatible with Aura Framework :-).
+Normally the server will show a message like `Starting the Aura development server @ http://localhost:8000/`, and point it to `http://localhost:8000/contact` . Feel free to change the route in `config/default.php` according to your need.
 
-I will be adding more independent packages like KnpMenu removing the static menu when I get free time.
 
-Fork the packages and play with it.
+    ├── config
+    ├── include
+    ├── package
+    │   ├── Aura.Autoload
+    │   ├── Aura.Cli
+    │   ├── Aura.Di
+    │   ├── Aura.Framework
+    │   ├── Aura.Http
+    │   ├── Aura.Marshal
+    │   ├── Aura.Router
+    │   ├── Aura.Signal
+    │   ├── Aura.Sql
+    │   ├── Aura.View
+    │   └── Aura.Web
+    ├── tmp
+    └── web
+        └── cache
+        |--index.php // document root
 
-Note : For the rendering to work, you need to use the below packages
-
-https://github.com/harikt/Aura.Framework/tree/render
-https://github.com/harikt/Aura.Web/tree/render
-
-The master on https://github.com/auraphp will not work with this Hari.Blog or Hari.Contact packages.
-
-Feel free to ask any queries at irc channel( freenode.net ) of #auraphp or shoot a tweet @harikt . I will try to solve if I can.
-
-Thanks
+Any questions shoot a tweet to @harikt or in #auraphp channel in irc.freenode.org

@@ -9,5 +9,4 @@ $di->get('router_map')->add('contact', '/contact', [
     ],
 ]);
 
-$di->params['Aura\Framework\Web\Factory']['map']['contact'] = 'Hari\Contact\Web\Contact\Page';
-
+$di->params['Aura\Framework\Web\Controller\Factory']['map']['contact'] = 'Hari\Contact\Web\Contact\Page';
