@@ -10,3 +10,6 @@ $di->get('router_map')->add('contact', '/contact', [
 ]);
 
 $di->params['Aura\Framework\Web\Controller\Factory']['map']['contact'] = 'Hari\Contact\Web\Contact\Page';
+
+$di->setter['Hari\Contact\Web\Contact\Page']['setContactForm'] =
+    $di->lazyNew('Hari\Contact\Web\Forms\ContactForm');

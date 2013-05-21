@@ -1,28 +1,43 @@
 <?php
 namespace Hari\Contact\Web\Forms;
 
-use \Zend_Form;
+use Aura\Input\Form;
 
-class ContactForm extends Zend_Form
+class ContactForm extends Form
 {
     public function init()
     {
-        $username = new \Zend_Form_Element_Text('username');
-        $username->addValidator(new \Zend_Validate_Alnum())
-            ->setLabel('Name')
-            ->setRequired(true);
+        $this->setField('name')
+            ->setAttribs([
+                'id' => 'name',
+                'size' => 20,
+                'maxlength' => 20,
+            ]);
+        $this->setField('email')
+            ->setAttribs([
+                'size' => 20,
+                'maxlength' => 20,
+            ]);
+        $this->setField('url')
+            ->setAttribs([
+                'size' => 20,
+                'maxlength' => 20,
+            ]);
+        $this->setField('message', 'textarea')
+            ->setAttribs([
+                'cols' => 40,
+                'rows' => 5,
+            ]);
+        $this->setField('submit', 'submit')
+            ->setAttribs(['value' => 'send']);
 
-        $email = new \Zend_Form_Element_Text('email');
-        $email->addValidator(new \Zend_Validate_EmailAddress())
-            ->setLabel('Email')
-            ->setRequired(true);
+        $filter = $this->getFilter();
 
-        $message = new \Zend_Form_Element_Textarea('message');
-        $message->setLabel('Message')
-            ->setRequired(true)
-            ->setAttribs(['rows' => 5, 'cols' => 10]);
-        
-        $this->addElements( array($username, $email, $message ) )
-            ->addElement('submit', 'send', array('label' => 'Send'));
+        $filter->addSoftRule('name', $filter::IS, 'string');
+        $filter->addSoftRule('name', $filter::IS, 'strlenMin', 4);
+        $filter->addSoftRule('email', $filter::IS, 'email');
+        $filter->addSoftRule('url', $filter::IS, 'url');
+        $filter->addSoftRule('message', $filter::IS, 'string');
+        $filter->addSoftRule('message', $filter::IS, 'strlenMin', 6);
     }
 }
