@@ -1,3 +1,6 @@
+<?php 
+$this->title()->set('Contact Us');
+?>
 <div class="row-fluid">
   <div class="span12">Contact Us</div>
 </div>
