@@ -1,10 +1,14 @@
-This is a sample project, just to demonstrate a Vendor.Package in Aura. Have a look into the `config/default.php`. Just drop this package in package folder of system folder.
+A sample contact form to show how to use Aura.Filter, Aura.Input with Aura.View. 
+
+For a standalone version check https://github.com/harikt/form-example
+
+Just drop this package in package folder of system folder. 
+
+Alternately adding `"hari/contact" : "dev-master"` to composer of system.
 
 # Requirements 
 a ) PHP 5.4
-b ) Aura system
-c ) Zend Framework 1 for we are creating forms. Eventually will be removed.
-Keep ZF1 in include folder of aura framework folder.
+b ) Aura Framework
 
 # Running Server:
 
@@ -12,7 +16,9 @@ Now you can run your development server via
  
     $php package/Aura.Framework/cli/server
 
-Normally the server will show a message like `Starting the Aura development server @ http://localhost:8000/`, and point it to `http://localhost:8000/contact` . Feel free to change the route in `config/default.php` according to your need.
+Normally the server will show a message like `Starting the Aura development server @ http://localhost:8000/`, 
+and point it to `http://localhost:8000/contact` . 
+Feel free to change the route in `config/default.php` according to your need.
 
 
     ├── config
