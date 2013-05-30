@@ -7,7 +7,7 @@ use Hari\Contact\Web\Forms\ContactForm;
 
 class Page extends AbstractPage
 {
-    protected $locator;
+    protected $form_factory;
     
     public function preExec()
     {
@@ -15,7 +15,7 @@ class Page extends AbstractPage
 
     public function actionIndex()
     {
-        $form = $this->locator->get('hari.contact.contactform');
+        $form = $this->form_factory->newInstance('hari.contact.contactform');
         $form->fill($_POST);
 
         if ($this->context->isPost()) {
@@ -35,8 +35,8 @@ class Page extends AbstractPage
         $this->layout = 'default';
     }
 
-    public function setLocator($locator)
+    public function setFormFactory($form_factory)
     {
-        $this->locator = $locator;
+        $this->form_factory = $form_factory;
     }
 }
