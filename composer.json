@@ -2,13 +2,13 @@
     "name": "hari/contact",
     "minimum-stability": "dev",
     "type": "aura-package",
-    "description": "This is a sample contact page",
+    "description": "Sample contact page working with Aura.Framework to show the Aura.Input and Aura.Filter and how things work",
     "keywords": [
         "aura",
-        "sample"
+        "sample",
+        "contact"
     ],
     "homepage": "http://harikt.com",
-    "time": "2012-07-30",
     "license": "BSD",
     "authors": [
         {
