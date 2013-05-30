@@ -3,24 +3,24 @@
   <head>
     <meta charset="utf-8">
 <?php
-    $this->scripts()->add('/asset/Hari.Blog/js/bootstrap.min.js');
-    $this->scripts()->add('/asset/Hari.Blog/js/jquery.js');
-    $this->scripts()->add('/asset/Hari.Blog/js/bootstrap-transition.js');
-    $this->scripts()->add('/asset/Hari.Blog/js/bootstrap-alert.js');
-    $this->scripts()->add('/asset/Hari.Blog/js/bootstrap-modal.js');
-    $this->scripts()->add('/asset/Hari.Blog/js/bootstrap-dropdown.js');
-    $this->scripts()->add('/asset/Hari.Blog/js/bootstrap-scrollspy.js');
-    $this->scripts()->add('/asset/Hari.Blog/js/bootstrap-tab.js');
-    $this->scripts()->add('/asset/Hari.Blog/js/bootstrap-tooltip.js');
-    $this->scripts()->add('/asset/Hari.Blog/js/bootstrap-popover.js');
-    $this->scripts()->add('/asset/Hari.Blog/js/bootstrap-button.js');
-    $this->scripts()->add('/asset/Hari.Blog/js/bootstrap-collapse.js');
-    $this->scripts()->add('/asset/Hari.Blog/js/bootstrap-carousel.js');
-    $this->scripts()->add('/asset/Hari.Blog/js/bootstrap-typeahead.js');
+    $this->scripts()->add('/asset/Hari.Contact/js/bootstrap.min.js');
+    $this->scripts()->add('/asset/Hari.Contact/js/jquery.js');
+    $this->scripts()->add('/asset/Hari.Contact/js/bootstrap-transition.js');
+    $this->scripts()->add('/asset/Hari.Contact/js/bootstrap-alert.js');
+    $this->scripts()->add('/asset/Hari.Contact/js/bootstrap-modal.js');
+    $this->scripts()->add('/asset/Hari.Contact/js/bootstrap-dropdown.js');
+    $this->scripts()->add('/asset/Hari.Contact/js/bootstrap-scrollspy.js');
+    $this->scripts()->add('/asset/Hari.Contact/js/bootstrap-tab.js');
+    $this->scripts()->add('/asset/Hari.Contact/js/bootstrap-tooltip.js');
+    $this->scripts()->add('/asset/Hari.Contact/js/bootstrap-popover.js');
+    $this->scripts()->add('/asset/Hari.Contact/js/bootstrap-button.js');
+    $this->scripts()->add('/asset/Hari.Contact/js/bootstrap-collapse.js');
+    $this->scripts()->add('/asset/Hari.Contact/js/bootstrap-carousel.js');
+    $this->scripts()->add('/asset/Hari.Contact/js/bootstrap-typeahead.js');
 
-    $this->styles()->add('/asset/Hari.Blog/css/bootstrap-responsive.min.css');
-    $this->styles()->add('/asset/Hari.Blog/css/bootstrap.css');
-    echo $this->metas()->get(); 
+    $this->styles()->add('/asset/Hari.Contact/css/bootstrap-responsive.min.css');
+    $this->styles()->add('/asset/Hari.Contact/css/bootstrap.css');
+    echo $this->metas()->get();
     echo $this->title()->get();
     echo $this->styles()->get();
 ?>
