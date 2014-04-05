@@ -7,6 +7,9 @@ class ContactForm extends Form
 {
     public function init()
     {
+        $options = $this->getOptions();
+        $states  = $options->getStates();
+             
         $this->setField('name')
             ->setAttribs([
                 'id' => 'name',
@@ -28,6 +31,33 @@ class ContactForm extends Form
                 'cols' => 40,
                 'rows' => 5,
             ]);
+            
+        $this->setField('cbarray', 'radios')
+            ->setAttribs(
+                [
+                    'name' => 'cbarray[]',                
+                ]
+            )
+            ->setOptions(
+                [
+                    'baz' => 'dib',
+                    'foo' => 'bar'
+                ]
+            )->setValue('baz');
+        
+        $this->setField('check', 'checkbox')
+            ->setAttribs(
+                [
+                    'name' => 'cbarray[]', 
+                    'type' => 'repeat'
+                ]
+            )
+            ->setOptions(array('baz' => 'dib', 'foo' => 'bar'))
+            ->setValue(array('baz' => 'dib', 'foo' => 'bar'));
+        
+        $this->setField('state', 'select')
+                 ->setOptions($states);
+        
         $this->setField('submit', 'submit')
             ->setAttribs(['value' => 'send']);
 
@@ -39,5 +69,6 @@ class ContactForm extends Form
         $filter->addSoftRule('url', $filter::IS, 'url');
         $filter->addSoftRule('message', $filter::IS, 'string');
         $filter->addSoftRule('message', $filter::IS, 'strlenMin', 6);
+        $filter->addSoftRule('state', $filter::IS, 'inKeys', $states);
     }
 }

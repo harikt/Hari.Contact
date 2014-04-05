@@ -11,13 +11,15 @@ $di->get('router_map')->add('contact', '/contact', [
 
 $di->params['Aura\Framework\Web\Controller\Factory']['map']['contact'] = 'Hari\Contact\Web\Contact\Page';
 
-$di->params['Hari\Contact\FormFactory'] = [
+$di->params['Aura\Input\FormFactory']['map'] = [
     // a map of form names to form factories
-    'map' => [
-        'hari.contact.contactform' => $di->newFactory('Hari\Contact\Web\Forms\ContactForm'),
-    ],
+    'hari.contact.contactform' => $di->newFactory('Hari\Contact\Web\Forms\ContactForm')
 ];
 
-$di->set('form_factory', $di->lazyNew('Hari\Contact\FormFactory'));
+$di->setter['Hari\Contact\Web\Contact\Page']['setFormFactory'] = $di->lazyGet('input_form_factory');
 
-$di->setter['Hari\Contact\Web\Contact\Page']['setFormFactory'] = $di->lazyGet('form_factory');
+$di->set('contact_options', function () use ($di) {
+    return $di->newInstance('Hari\Contact\Web\Forms\Options');
+});
+
+$di->params['Hari\Contact\Web\Forms\ContactForm']['options'] = $di->lazyGet('contact_options');

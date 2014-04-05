@@ -15,10 +15,10 @@ class Page extends AbstractPage
 
     public function actionIndex()
     {
-        $form = $this->form_factory->newInstance('hari.contact.contactform');
-        $form->fill($_POST);
+        $form = $this->form_factory->newInstance('hari.contact.contactform');        
 
         if ($this->context->isPost()) {
+            $form->fill($_POST);
             if ($form->filter()) {
                 // Do what you love
             }

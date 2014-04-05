@@ -61,6 +61,45 @@ $this->title()->set('Contact Us');
                 </td>
             </tr>
             <tr>
+                <td>check : </td>
+                <td>
+                <?php
+                    echo $this->field($this->form->get('check'));
+                    $data = [
+                        'form' => $this->form,
+                        'name' => 'check'
+                    ];
+                    echo $this->partial('_field', $data);
+                ?>
+                </td>
+            </tr>
+            <tr>
+                <td>check : </td>
+                <td>
+                <?php
+                    echo $this->field($this->form->get('cbarray'));
+                    $data = [
+                        'form' => $this->form,
+                        'name' => 'cbarray'
+                    ];
+                    echo $this->partial('_field', $data);
+                ?>
+                </td>
+            </tr>
+            <tr>
+                <td>States : </td>
+                <td>
+                <?php
+                    echo $this->field($this->form->get('state'));
+                    $data = [
+                        'form' => $this->form,
+                        'name' => 'state'
+                    ];
+                    echo $this->partial('_field', $data);
+                ?>
+                </td>
+            </tr>
+            <tr>
                 <td colspan="2">
                 <?php
                 echo $this->field($this->form->get('submit'));
