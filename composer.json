@@ -9,7 +9,7 @@
         "contact"
     ],
     "homepage": "http://harikt.com",
-    "license": "BSD",
+    "license": "BSD-2-Clause",
     "authors": [
         {
             "name": "Hari.Contact Contributors",
@@ -47,6 +47,6 @@
     },
     "config": {
         "component-dir": "web/assets",
-        "component-baseurl": "/assets",
+        "component-baseurl": "/assets"
     }
 }
