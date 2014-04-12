@@ -24,8 +24,8 @@
       <!-- Title Area -->
       <li class="name">
         <h1>
-          <a href="#">
-            Built with love for aura
+          <a href="http://auraphp.com">
+            With love for aura
           </a>
         </h1>
       </li>
@@ -85,21 +85,8 @@
   <!-- Main Page Content and Sidebar -->
  
   <div class="row">
- 
-    <!-- Contact Details -->
-    <div class="large-9 columns">
-      <?php echo $this->__raw()->inner_view; ?>      
-    </div>
- 
-    <!-- End Contact Details -->
- 
- 
-    <!-- Sidebar -->     
-    <div class="large-3 columns">
-      <?php include $this->find('side-nav'); ?>
-    </div>
-    <!-- End Sidebar -->    
-
+    <?php echo $this->__raw()->inner_view; ?>          
+    <?php include $this->find('side-nav'); ?>
   </div> 
   <!-- End Main Content and Sidebar -->
  
