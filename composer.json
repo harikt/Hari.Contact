@@ -22,10 +22,8 @@
         }
     ],    
     "autoload": {
-        "psr-0": {
-            "": "src/"
-        },
         "psr-4": {
+            "Hari\\Contact\\": "src/",
             "Hari\\Contact\\_Config\\": "config/"
         }
     },
