@@ -16,7 +16,7 @@ The assets like css is rendered via the help of https://github.com/RobLoach/comp
 
 ```json
     "config": {
-        "component-dir": "public/assets",
+        "component-dir": "web/assets",
         "component-baseurl": "/assets"
     }
 ```
