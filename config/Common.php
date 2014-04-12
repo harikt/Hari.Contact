@@ -8,7 +8,9 @@ class Common extends Config
 {
     public function define(Container $di)
     {
+        $di->params['Aura\Input\FormFactory']['map']['hari.contact.contactform'] = $di->lazyNew('Hari\Contact\Input\ContactForm');
         $di->setter['Hari\Contact\Web\ContactController']['setFormFactory'] = $di->lazyGet('input_form_factory');
+        $di->setter['Hari\Contact\Web\ContactController']['setRenderer'] = $di->lazyNew('Aura\View\TwoStep');
     }
 
     public function modify(Container $di)
