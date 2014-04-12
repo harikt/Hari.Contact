@@ -19,7 +19,7 @@ class Common extends Config
         $router->add('contact', '/contact')
             ->setValues([
                 'controller' => 'contact',
-                'action' => 'index',
+                'action' => 'actionIndex',
         ]);
         $dispatcher = $di->get('web_dispatcher');
         $dispatcher->setObject(
