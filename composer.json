@@ -1,8 +1,8 @@
 {
     "name": "hari/contact",
     "minimum-stability": "dev",
-    "type": "aura-package",
-    "description": "Sample contact page working with Aura.Framework to show the Aura.Input and Aura.Filter and how things work",
+    "type": "library",
+    "description": "Contact form example via Aura.Input and Aura.Filter and how things work",
     "keywords": [
         "aura",
         "sample",
@@ -20,9 +20,33 @@
             "email": "kthari85@gmail.com",
             "homepage": "http://harikt.com"
         }
-    ],
+    ],    
+    "autoload": {
+        "psr-0": {
+            "": "src/"
+        },
+        "psr-4": {
+            "Hari\\Contact\\_Config\\": "config/"
+        }
+    },
     "require": {
         "php": ">=5.4.0",
-        "aura/framework": ">=1.0.0-beta7"
+        "aura/web-kernel": "2.*@dev",
+        "aura/view": "dev-develop",
+        "foa/filter-input-bundle": "dev-master",
+        "foa/filter-intl-bundle": "dev-master",
+        "components/foundation": "5.2.*"
+    },
+    "extra": {
+        "aura": {
+            "type": "project",
+            "config": {
+                "common": "Hari\\Contact\\_Config\\Common"                
+            }
+        }
+    },
+    "config": {
+        "component-dir": "web/assets",
+        "component-baseurl": "/assets",
     }
 }

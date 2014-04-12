@@ -1,5 +1,5 @@
 <?php
-namespace Hari\Contact\Web\Forms;
+namespace Hari\Contact\Input;
 
 use Aura\Input\Form;
 
